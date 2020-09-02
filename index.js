@@ -30,8 +30,9 @@ inquirer.prompt([
   {
     type: "list",
     message: "Which license?",
-    name: "License"
-  },
+    name: "License",
+    choices: ["BSD", "MIT", "GPL"] 
+ }, 
   {
     type: "input",
     message: "Contributing?",
@@ -44,8 +45,13 @@ inquirer.prompt([
   },
   {
     type: "input",
-    message: "Questions?",
-    name: "Question"
+    message: "What is Github username?",
+    name: "Questions"
+  },
+  {
+    type: "input",
+    message: "What is your email",
+    name: "Questions"
   },
 
   ]).then((userResponse)=>{
