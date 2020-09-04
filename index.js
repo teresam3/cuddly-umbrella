@@ -1,8 +1,16 @@
 const inquirer = require("inquirer")
 const fs = require("fs")
-const x = userResponse
 
 function writeHTML(x) {
+  if (x.License === 'MIT') {
+    prepend('README.MD') 
+    } 
+    else if (x.License === 'Apache') {
+    prepend('README.MD')
+    }
+    else if (x.License === 'GNU') {
+    prepend('README.MD')
+    }
   return `
   ## ${x.name}
     ${x.Title}
@@ -81,16 +89,6 @@ inquirer.prompt([
   },
 
   ]).then((userResponse)=>{
-
-    if (x.License === MIT) {
-     prepend('README.MD')
-    } 
-    else if (x.License === Apache) {
-      prepend('README.MD')
-    }
-    else if (x.License === GNU) {
-      prepend('README.MD')
-    }
 
     const data = writeHTML(userResponse)
     fs.writeFile("README.MD", data, function(){
