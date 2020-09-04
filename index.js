@@ -2,15 +2,15 @@ const inquirer = require("inquirer")
 const fs = require("fs")
 
 function writeHTML(x) {
-  if (x.License === 'MIT') {
-    prepend('README.MD') 
-    } 
-    else if (x.License === 'Apache') {
-    prepend('README.MD')
-    }
-    else if (x.License === 'GNU') {
-    prepend('README.MD')
-    }
+  // if (x.License === 'MIT') {
+  //   prepend('README.MD') 
+  //   } 
+  //   else if (x.License === 'Apache') {
+  //   prepend('README.MD')
+  //   }
+  //   else if (x.License === 'GNU') {
+  //   prepend('README.MD')
+  //   }
   return `
   ## ${x.name}
     ${x.Title}
